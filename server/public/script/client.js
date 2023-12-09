@@ -7,6 +7,7 @@ console.log('!!!Hello!!!')
 // a new employee's first name, last name, ID number, job title, annual salary.
 
 // When the "Submit" button is clicked:
+// [x]Create button 
 
 // A new employee row should be added to the table.
 // The footer's total monthly cost should be updated.
