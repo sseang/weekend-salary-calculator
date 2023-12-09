@@ -4,15 +4,19 @@
     
 }
 
+
 table {
     border: 1px solid #000000;
 }
 
 td, th {
-   border: 1px solid #253240;
+   border: 2px solid #253240;
+   width: 100px;
+   height: 25px;
 }
 
-#tableContent {
-    margin-left: 25%
-}
+table {
+    margin-left: 10%
+} 
 
+ 
