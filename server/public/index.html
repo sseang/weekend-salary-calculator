@@ -19,26 +19,47 @@
     <div id="content">
       <div class="formArea">
         <form>
-
-        <!--Input 1st name-->
-        <input type="text" class="form-control"placeholder="First Name">
-
-        <!--Input last name-->
-        <input type="text" class="form-control"placeholder="">
-
-        <!--Input ID num-->
-        <input type="text" class="form-control"placeholder="">
-
-        <!--Input Job Title-->
-        <input type="text" class="form-control"placeholder="">
-
-        <!--Input Annual Salary--> 
-        <input type="text" class="form-control"placeholder="">
+          <div class="form-group-row">
+          <!--Input 1st name-->
+          <input type="text" class="form-control"placeholder="First Name">
+          <!--Input last name-->
+          <input type="text" class="form-control"placeholder="Last Name">
+          <!--Input ID num-->
+          <input type="text" class="form-control"placeholder="ID">
+          <!--Input Job Title-->
+          <input type="text" class="form-control"placeholder="Title">
+          <!--Input Annual Salary--> 
+          <input type="text" class="form-control"placeholder="Annual Income">
+          </div>
+          
+          <div class="form-group-row">
+          <!--Create Submit button-->
+            <div class="buttonContainer">
+              <button type="button" class="btn btn-primary submitButton" onclick="">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
 
     <h2>Employees</h2>
-        </form>
-      </div>
-    </div>
+    <section>
+      <table id="tableContent">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+            <th></th>
+          </tr>
+        </thead>
+
+      </table>
+
+
+    </section>
   </main>
   <footer>
     <p>Total Monthly</p>

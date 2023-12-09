@@ -1,0 +1,18 @@
+.buttonContainer {
+    margin-left: 76%;
+    margin-top: 10px;
+    
+}
+
+table {
+    border: 1px solid #000000;
+}
+
+td, th {
+   border: 1px solid #253240;
+}
+
+#tableContent {
+    margin-left: 25%
+}
+
