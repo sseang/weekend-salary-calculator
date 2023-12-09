@@ -21,21 +21,21 @@
         <form>
           <div class="form-group-row">
           <!--Input 1st name-->
-          <input type="text" class="form-control"placeholder="First Name">
+          <input type="text" id="firstName-input"placeholder="First Name">
           <!--Input last name-->
-          <input type="text" class="form-control"placeholder="Last Name">
+          <input type="text" id="lastName-input"placeholder="Last Name">
           <!--Input ID num-->
-          <input type="number" class="form-control"placeholder="ID">
+          <input type="number" id="ID-input"placeholder="ID">
           <!--Input Job Title-->
-          <input type="text" class="form-control"placeholder="Title">
+          <input type="text" id="title-input"placeholder="Title">
           <!--Input Annual Salary--> 
-          <input type="number" class="form-control"placeholder="Annual Income">
+          <input type="number" id="annual-input"placeholder="Annual Income">
           </div>
           
           <div class="form-group-row">
           <!--Create Submit button-->
             <div class="buttonContainer">
-              <button type="button" class="btn btn-primary submitButton" onclick="">Submit</button>
+              <button type="button" class="btn btn-primary submitButton"onclick="submitForm()">Submit</button>
             </div>
           </div>
         </div>
@@ -44,8 +44,9 @@
 
     <h2>Employees</h2>
     <section>
+      <!--Create table-->
       <table id="tableContent">
-        <thead id="tableHeader">
+        <thead>
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
@@ -54,10 +55,9 @@
             <th>Annual Salary</th>
             <th colspan = "2">Delete</th>
 
-
           </tr>
         </thead>
-          <tbody id="tableBody">
+          <tbody>
             <tr>
               <td></td>
               <td></td>
@@ -65,8 +65,6 @@
               <td></td>
               <td></td>
               <td><button>Delete</button></td>
-
-
             </tr>
             <tr>
               <td></td>
@@ -75,7 +73,6 @@
               <td></td>
               <td></td>
               <td><button>Delete</button></td>
-
             </tr>
             <tr>
               <td></td>
@@ -84,17 +81,15 @@
               <td></td>
               <td></td>
               <td><button>Delete</button></td>
-
             </tr>
           </tbody>
-
       </table>
 
 
     </section>
   </main>
   <footer>
-    <p>Total Monthly</p>
+    <p>Total Monthly:</p>
   </footer>
 
   <!--Sourced Javascript link-->

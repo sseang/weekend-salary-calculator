@@ -9,15 +9,65 @@ console.log('!!!Hello!!!')
 // When the "Submit" button is clicked:
 // [x]Create button 
 
-// A new employee row should be added to the table.
+//create funtion for on clicksubmit event
+function submitForm(event) {
+    console.log('In the submit function:');
+  
+    
+    //obtain all input elements
+    const firstName = document.querySelector('#firstName-input').value;
+    console.log(firstName);
+    
+    const lastName = document.querySelector('#lastName-input').value;
+    console.log(lastName);
+    
+    const ID = document.querySelector('#ID-input').value;
+    console.log(ID);
+    
+    const title = document.querySelector('#title-input').value;
+    console.log(title);
+    
+    const annual = document.querySelector('#annual-input').value;
+    console.log(annual);
+    
+    // A new employee row should be added to the table.
+    const employeeTable = document.querySelector ('#tableContent');
+    console.log('Table:', employeeTable);
+    employeeTable.innerHTML += `
+    <tr>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${ID}</td>
+        <td>${title}</td>
+        <td>${annual}</td>
+        <td><button>Delete</button></td>
+    </tr>
+    `;
+    
+    // The form inputs should be cleared out. Ask class why this does not work
+    // firstName.value= '';
+    // lastName.value= '';
+    // ID.value= '';
+    // title.value= '';
+    // annual.value= '';
+
+    document.querySelector('#firstName-input').value = '';
+    document.querySelector('#lastName-input').value = '';
+    document.querySelector('#ID-input').value = '';
+    document.querySelector('#title-input').value = '';
+    document.querySelector('#annual-input').value = '';
+
+}
+
+//submitForm();
 // The footer's total monthly cost should be updated.
-// The form inputs should be cleared out.
+//penguinsElement.innerHTML = '';
 // If the total monthly cost exceeds $20,000, apply an over-budget CSS class
 // to the footer element.
 
 //  When applied, this CSS class should provide a clear visual indication that the 
 // monthly cost has been exceeded. (This could be as simple as turning the footer text red.)
 
-// Create a "Delete" button that removes an employee from the DOM.
+// Create a "Deconste" button that removes an employee from the DOM.
 
-// For base mode, the total monthly cost does not need to be updated when an employee is deleted.
+// For base mode, the total monthly cost does not need to be updated when an employee is deconsted.
