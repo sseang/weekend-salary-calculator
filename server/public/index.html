@@ -13,6 +13,8 @@
   </header>
 
   <hr class="pageBreak">
+  <p class="over-budget"></p>
+
 
   <main>
     <h2 class="addEmployees">Add Employee</h2>
@@ -64,24 +66,10 @@
               <td></td>
               <td></td>
               <td></td>
-              <td><button>Delete</button></td>
+              <!--Create a "Delete" button that removes an employee from the DOM.-->
+              <td><button onclick="return this.parentNode.parentNode.remove()">Delete</button></td>
             </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><button>Delete</button></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><button>Delete</button></td>
-            </tr>
+
           </tbody>
       </table>
 
@@ -90,7 +78,7 @@
   </main>
   <footer>
     <!--Monthly Footer-->
-    <p id="monthly">Total Monthly:</p>
+    <p id="monthly">Total Monthly: $</p>
 
   </footer>
 

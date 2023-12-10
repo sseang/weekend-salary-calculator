@@ -46,9 +46,10 @@ function submitForm(event) {
         <td>${ID}</td>
         <td>${title}</td>
         <td>${annual}</td>
-        <td><button>Delete</button></td>
-    </tr>
-    `;
+        <td><button onclick="return this.parentNode.parentNode.remove()">Delete</button></td>
+        </tr>
+        `;
+        // Create a "Delete" button that removes an employee from the DOM.
     
     // The form inputs should be cleared out. Ask class why this does not work
     // firstName.value= '';
@@ -57,41 +58,46 @@ function submitForm(event) {
     // title.value= '';
     // annual.value= '';
  
+    // The footer's total monthly cost should be updated.
     if (annual != '') {
         annualArr.push(parseInt(annual));
         totalMonthly += annualArr[0];
         annualArr.shift();
+
     }
 
     console.log(totalMonthly);
     console.log('Monthly:', monthly);
-    //let newAnnual = annual;
-    //console.log(newAnnual);
+    monthly.innerHTML = `Total Monthly:$ ${totalMonthly}`;
 
+    
     document.querySelector('#firstName-input').value = '';
     document.querySelector('#lastName-input').value = '';
     document.querySelector('#ID-input').value = '';
     document.querySelector('#title-input').value = '';
     document.querySelector('#annual-input').value = '';
+    
 
-    //const monthly = document.querySelector('#monthly');
-    //console.log('Monthly:', monthly);
-    //let newAnnual = annual;
-    //console.log(newAnnual);
+    // If the total monthly cost exceeds $20,000, apply an over-budget CSS class
+// to the footer element.
+
+//  When applied, this CSS class should provide a clear visual indication that the 
+// monthly cost has been exceeded. (This could be as simple as turning the footer text red.)
+    if (totalMonthly > 20000) {
+        let NewClass = document.querySelector('#monthly')
+        console.log(NewClass);
+        NewClass.classList.add('over-budget');
+
+    }
 
 
 
 }
 
 submitForm();
-// The footer's total monthly cost should be updated.
-//penguinsElement.innerHTML = '';
-// If the total monthly cost exceeds $20,000, apply an over-budget CSS class
-// to the footer element.
 
-//  When applied, this CSS class should provide a clear visual indication that the 
-// monthly cost has been exceeded. (This could be as simple as turning the footer text red.)
 
-// Create a "Delete" button that removes an employee from the DOM.
 
-// For base mode, the total monthly cost does not need to be updated when an employee is deconsted.
+
+
+// For base mode, the total monthly cost does not need to be updated when an employee is deleted.
