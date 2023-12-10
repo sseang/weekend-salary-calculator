@@ -9,6 +9,9 @@ console.log('!!!Hello!!!')
 // When the "Submit" button is clicked:
 // [x]Create button 
 
+let annualArr = []
+let totalMonthly = 0;
+
 //create funtion for on clicksubmit event
 function submitForm(event) {
     console.log('In the submit function:');
@@ -29,6 +32,9 @@ function submitForm(event) {
     
     const annual = document.querySelector('#annual-input').value;
     console.log(annual);
+
+    const monthly = document.querySelector('#monthly');
+
     
     // A new employee row should be added to the table.
     const employeeTable = document.querySelector ('#tableContent');
@@ -50,6 +56,17 @@ function submitForm(event) {
     // ID.value= '';
     // title.value= '';
     // annual.value= '';
+ 
+    if (annual != '') {
+        annualArr.push(parseInt(annual));
+        totalMonthly += annualArr[0];
+        annualArr.shift();
+    }
+
+    console.log(totalMonthly);
+    console.log('Monthly:', monthly);
+    //let newAnnual = annual;
+    //console.log(newAnnual);
 
     document.querySelector('#firstName-input').value = '';
     document.querySelector('#lastName-input').value = '';
@@ -57,9 +74,16 @@ function submitForm(event) {
     document.querySelector('#title-input').value = '';
     document.querySelector('#annual-input').value = '';
 
+    //const monthly = document.querySelector('#monthly');
+    //console.log('Monthly:', monthly);
+    //let newAnnual = annual;
+    //console.log(newAnnual);
+
+
+
 }
 
-//submitForm();
+submitForm();
 // The footer's total monthly cost should be updated.
 //penguinsElement.innerHTML = '';
 // If the total monthly cost exceeds $20,000, apply an over-budget CSS class
@@ -68,6 +92,6 @@ function submitForm(event) {
 //  When applied, this CSS class should provide a clear visual indication that the 
 // monthly cost has been exceeded. (This could be as simple as turning the footer text red.)
 
-// Create a "Deconste" button that removes an employee from the DOM.
+// Create a "Delete" button that removes an employee from the DOM.
 
 // For base mode, the total monthly cost does not need to be updated when an employee is deconsted.
