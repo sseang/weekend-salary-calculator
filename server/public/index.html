@@ -23,21 +23,22 @@
         <form>
           <div class="form-group-row">
           <!--Input 1st name-->
-          <input type="text" id="firstName-input"placeholder="First Name">
+          <input type="text"data-testid="firstNameInput" id="firstName-input"placeholder="First Name">
           <!--Input last name-->
-          <input type="text" id="lastName-input"placeholder="Last Name">
+          <input type="text"data-testid="lastNameInput" id="lastName-input"placeholder="Last Name">
           <!--Input ID num-->
-          <input type="number" id="ID-input"placeholder="ID">
+          <input type="number"data-testid="idInput" id="ID-input"placeholder="ID">
           <!--Input Job Title-->
-          <input type="text" id="title-input"placeholder="Title">
+          <input type="text"data-testid="titleInput" id="title-input"placeholder="Title">
           <!--Input Annual Salary--> 
-          <input type="number" id="annual-input"placeholder="Annual Income">
+          <input type="number"data-testid="annualSalaryInput" id="annual-input"placeholder="Annual Income">
           </div>
           
           <div class="form-group-row">
           <!--Create Submit button-->
             <div class="buttonContainer">
-              <button type="button" class="btn btn-primary submitButton"onclick="submitForm()">Submit</button>
+              <button data-testid="submitButton" type="button" class="btn btn-primary submitButton"onclick="submitForm()">
+                Submit</button>
             </div>
           </div>
         </div>
